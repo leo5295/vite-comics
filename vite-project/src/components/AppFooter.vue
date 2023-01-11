@@ -40,7 +40,7 @@ export default {
                 </nav>
             </div>
             <div class="footer-links">
-                <h4>DC COMICS</h4>
+                <h4>DC</h4>
                 <nav>
                     <ul>
                         <li><a href="#">Il pastifiscio</a></li>
@@ -52,7 +52,7 @@ export default {
                 </nav>
             </div>
             <div class="footer-links">
-                <h4>DC COMICS</h4>
+                <h4>SITES</h4>
                 <nav>
                     <ul>
                         <li><a href="#">Il pastifiscio</a></li>
@@ -67,15 +67,8 @@ export default {
     </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-footer{
-    display: flex;
-}
 
-.footer-links{
-    display: inline;
-
-}
 
 </style>

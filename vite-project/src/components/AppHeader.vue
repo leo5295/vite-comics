@@ -55,6 +55,13 @@ export default {
               },
           ]
       }
+  },
+  methods: {
+    setActive: function(index) {
+      this.menu.forEach((item, i) => {
+        item.active = i === index;
+      });
+    }
   }
 }
 </script>
@@ -67,7 +74,7 @@ export default {
      </a>
      <nav>
       <ul>
-          <li v-for="(item, index) in menu" :key="index" class="link" :class="item.active ? 'active' : ''">
+        <li v-for="(item, index) in menu" :key="index" :class="item.active ? 'active' : ''" @click="setActive(index)">
               <a :href="item.url" class="link">
               {{item.label}}
               </a>
@@ -76,6 +83,7 @@ export default {
      </nav>
   </header>
 </template>
+
 
 <style scoped lang="scss">
 header{
@@ -104,17 +112,19 @@ ul{
     list-style: none;
 }
 
+li.active{
+        border-bottom-color: #0282f9;
+}
+
 li{
     display: inline;
     a:link { text-decoration: none; }
     padding: 15px;
-    margin: 2px;
     border-bottom: 5px solid transparent;
 
-}
-
-li.active{
-        border-block-color: blue;
+    &:hover {
+        border-bottom-color: #0282f9;
+    }
 }
 
 </style>
