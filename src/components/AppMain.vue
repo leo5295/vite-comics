@@ -40,10 +40,10 @@
         <div class="blue">
         <ul>
             <li v-for="(item, index) in menu" :key="index">
+                <img :src="item.url" alt="option" class="icon">
               <a :href="item.url" class="link">
               {{item.label}}
               </a>
-              <img :src="item.url" alt="option" class="icon">
           </li>
       </ul>
         </div>
@@ -58,9 +58,15 @@ ul{
 
 .blue{    
     background-color: #0282f9;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
 }
 .icon{
-    height: 50px;
+    height: 60px;
 }
 .black{
     height: 50px;
@@ -74,4 +80,26 @@ main{
     background-color: black;
     color: white;
 }
+
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li:last-child img{
+    width: 70px;
+}
+
+a{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.link:hover{
+    color: inherit;
+}
+
 </style>

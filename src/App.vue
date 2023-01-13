@@ -28,8 +28,10 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
