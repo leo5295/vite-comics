@@ -30,7 +30,7 @@ export default {
         getImageUrl(img) {
             return new URL()
         }
-}
+    }
 }
 </script>
 <template lang="">
@@ -97,7 +97,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-sx">
-                        <button>SIGN-UP NOW!</button>
+                        <button class="btn btn-primary">SIGN-UP NOW!</button>
                     </div>
                     <div class="col-dx">
                         <ul class="ul-social">
@@ -115,56 +115,58 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
 }
+
 .col-1 {
     flex-direction: column;
 }
 
-.col-2, .col-3, .col-4 {
+.col-2,
+.col-3,
+.col-4 {
     flex-direction: row;
 }
 
-.footer-links{
+.footer-links {
     flex: 1;
 
 }
 
-footer{
+footer {
     height: 300px;
     background: url(../assets/img/footer-bg.jpg)
 }
 
-.logo-footer{
+.logo-footer {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.social{
+.social {
     height: 100px;
     background-color: black;
 }
 
-a, h4{
+a,
+h4 {
     color: white;
 }
 
-.ul-social{
+.ul-social {
     display: flex;
     list-style: none;
 }
 
-.ul-social li{
+.ul-social li {
     margin: 20px;
 }
-
 </style>

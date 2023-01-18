@@ -1,41 +1,48 @@
-    
+
 <script>
-    
-    export default {
-      data() {
-          return {
-              menu: [
-                  {
-                      label: 'DIGITAL COMICS',
-                      url: '../src/assets/img/buy-comics-digital-comics.png',
-                  },
-                  {
-                      label: 'DC MERCHANDISE',
-                      url: '../src/assets/img/buy-comics-merchandise.png',
-                  },
-                  {
-                      label: 'SUBSCRIPTION',
-                      url: '../src/assets/img/buy-comics-shop-locator.png',
-                  },
-                  {
-                      label: 'COMIC SHOP LOCATOR',
-                      url: '../src/assets/img/buy-comics-subscriptions.png',
-                  },
-                  {
-                      label: 'DC POWER VISA',
-                      url: '../src/assets/img/buy-dc-power-visa.svg',
-                  },
-              ]
-          }
-      }
+import comicsData from '../assets/data/dataComics.js';
+
+export default {
+    data() {
+        return {
+            comics: comicsData,
+            menu: [
+                {
+                    label: 'DIGITAL COMICS',
+                    url: '../src/assets/img/buy-comics-digital-comics.png',
+                },
+                {
+                    label: 'DC MERCHANDISE',
+                    url: '../src/assets/img/buy-comics-merchandise.png',
+                },
+                {
+                    label: 'SUBSCRIPTION',
+                    url: '../src/assets/img/buy-comics-shop-locator.png',
+                },
+                {
+                    label: 'COMIC SHOP LOCATOR',
+                    url: '../src/assets/img/buy-comics-subscriptions.png',
+                },
+                {
+                    label: 'DC POWER VISA',
+                    url: '../src/assets/img/buy-dc-power-visa.svg',
+                },
+            ],
+        }
     }
-    
+}
+
 </script>
 
 <template lang="">
     <main>
         <div class="black">
-            CONTENT GOES HERE
+            <div class="album-card" v-for="(item, index) in menu" :key="index">
+                <div class="album-image">
+                    <img :src="item.thumb" :alt="item.series">
+                </div>
+                <h4>{{ item.series }}</h4>
+            </div>
         </div>
         <div class="blue">
         <ul>
@@ -51,12 +58,11 @@
 </template>
 
 <style lang="scss" scoped>
-
-ul{
+ul {
     display: flex;
 }
 
-.blue{    
+.blue {
     background-color: #0282f9;
     height: 100px;
     display: flex;
@@ -65,10 +71,12 @@ ul{
     align-content: space-between;
     text-align: center;
 }
-.icon{
+
+.icon {
     height: 60px;
 }
-.black{
+
+.black {
     height: 50px;
     width: 80%;
     margin: 0 auto;
@@ -76,30 +84,29 @@ ul{
     align-items: center;
 }
 
-main{
+main {
     background-color: black;
     color: white;
 }
 
-li{
+li {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-li:last-child img{
+li:last-child img {
     width: 70px;
 }
 
-a{
+a {
     margin: 10px;
     text-decoration: none;
     color: white;
 
 }
 
-.link:hover{
+.link:hover {
     color: inherit;
 }
-
 </style>
